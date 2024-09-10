@@ -14,14 +14,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Docker Buildx
-        uses: aquasecurity/trivy-action@0.20.0
+        uses: docker/setup-buildx-action@v2
 
       - name: Build Docker Image
         run: |
           docker build -t anand564/anand-server:latest .
 
       - name: Run Trivy Vulnerability Scan
-        uses: aquasecurity/trivy-action@v1
+        uses: aquasecurity/trivy-action@0.20.0
         with:
           image-ref: anand564/anand-server:latest
 
