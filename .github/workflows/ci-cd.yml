@@ -25,4 +25,4 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          docker push anand-server:latest
+          docker push anandn564/anand-server:latest
